@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+
+}
+section{
+    padding: 50px 10%;
+}
+*::selection{
+    color: rgb(195, 0, 255);
+}
+img{
+    width: 100%;
+}
+header
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    z-index: 99999;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 3%;
+    box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
+    background-color: #604d9e;
+    transition: 0.2s;
+}
+header ul .submenu
+{
+    position: absolute;
+    width: 105px;
+    background-color:  #604d9e;
+    box-shadow: 0 20px 45px #00000020;
+    margin-top: -50px;
+    opacity: 0;
+    z-index: -999;
+    transition: all ease 0.5s;
+}
+    
+header ul li:hover .submenu
+{
+    z-index: 99;
+    opacity: 3;
+    margin-top: 0;
+}
+    
+header ul .submenu li{
+    margin: 0;
+    width: 100%;
+} 
+    
+header ul .submenu li a{
+    padding: 15px 20px;
+    display: block;
+    width: 100%;
+}
+
+.logo
+{
+    display: flex;
+    font-family: Yeseva One;
+    font-size: 30px;
+    font-weight: bold;
+    color: violet;
+    text-decoration: none;
+    align-items: center;
+
+}
+.navbar{
+    display: flex;
+    
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: white;
+    font-weight: 600;
+    
+}
+.navbar a:hover{
+    color: rgb(173, 160, 247);
+}
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+
+.wrapper {
+    position: relative;
+    top: 120px;
+    width: 480px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: height .2s ease;
+    margin: 50px auto;
+    
+}
+
+.wrapper.active{
+    height: 600px;
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: white;
+    font-size: 2em;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 1s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: black;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: black;
+    line-height: 57px;
+}
+
+.remember-forgot{
+    font-size: .9em;
+    color: black;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input{
+    accent-color: black;
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: black;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background: black;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+}
+
+.login-register{
+    font-size: .9em;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
+}
+
+.form-box.register {
+    display: none;
+}
+
+
+@media (max-width: 1150px){
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 7%;
+    }
+   
+}
+
+@media (max-width: 991px){
+    header{
+        padding: 18px 4%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+   
+}
+
+
+@media (max-width: 768px) {
+    header ul .submenu {
+      position: static;
+      width: 100%;
+      background-color: #ffffff;
+      box-shadow: none;
+      margin-top: 0;
+      opacity: 1;
+      z-index: 1;
+      transition: none;
+      display: none;
+    }
+  
+    header ul li:hover .submenu {
+      display: block;
+    }
+  
+    header ul .submenu li {
+      width: 30%;
+      text-align: center;
+    }
+  
+    header ul .submenu li a {
+      padding: 10px 10px;
+    }
+  }
+
+@media (max-width: 768px){
+    header{
+        padding: 11px 4%;   
+    }
+    #menu-icon{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: rgb(255, 255, 255);
+        box-shadow: green;
+        border-top: 2px solid pink;
+        transition: 0.2s;
+        text-align: left;
+    }
+    .navbar.active{
+        top: 100%
+    }
+    .navbar a{
+        padding: 1.5rem;
+        display: block;
+        color:rgb(195, 0, 255);
+
+    }
+ 
+}
+
+@media only screen and (max-width: 991px) {
+    .wrapper {
+      width: 50%;
+      padding: 0 20px;
+      margin-left: 120px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .wrapper {
+      width: 90%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    .input-box {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    
+    .Btn {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .wrapper {
+      width: 500px;
+      margin: 0 auto;
+    }
+  }
+  

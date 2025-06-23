@@ -1,0 +1,405 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+
+}
+section{
+    padding: 50px 10%;
+}
+*::selection{
+    color: rgb(195, 0, 255);
+}
+img{
+    width: 100%;
+}
+header
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 3%;
+    box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
+    background-color: #604d9e;
+    transition: 0.2s;
+}
+header ul .submenu
+{
+    position: absolute;
+    width: 105px;
+    background-color: #604d9e;
+    box-shadow: 0 20px 45px #00000020;
+    margin-top: -50px;
+    opacity: 0;
+    z-index: -999;
+    transition: all ease 0.5s;
+}
+    
+header ul li:hover .submenu
+{
+    z-index: 99;
+    opacity: 3;
+    margin-top: 0;
+}
+    
+header ul .submenu li{
+    margin: 0;
+    width: 100%;
+} 
+    
+header ul .submenu li a{
+    padding: 15px 20px;
+    display: block;
+    width: 100%;
+}
+    
+
+.logo
+{
+    display: flex;
+    font-family: Yeseva One;
+    font-size: 25px;
+    font-weight: bold;
+    color: violet;
+    text-decoration: none;
+    align-items: center;
+}
+.navbar{
+    display: flex;
+    
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: white;
+    font-weight: 600;
+    
+}
+.navbar a:hover{
+    color: rgb(173, 160, 247);
+}
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+
+
+
+
+.Contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #7d6fcc;
+}
+.social a{
+    font-size: 20px;
+    margin: 0.5rem;
+}
+.social a .bx{
+    padding: 5px;
+    color:white;
+    background: black;
+    border-radius: 50%;
+    
+}
+.social a .bx:hover{
+    background: violet;
+}
+.links{
+    margin:1rem 0 1rem;
+}
+.links a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    padding: 1rem;
+}
+.links a:hover{
+    color: white;
+}
+.Contact p{
+    text-align: center;
+}
+
+
+@media (max-width: 1150px){
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 7%;
+    }
+    .home-text h1{
+        font-size: 3rem;
+    }
+    .home-text h2{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width: 991px){
+    header{
+        padding: 18px 4%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+   
+}
+
+
+@media (max-width: 768px) {
+    header ul .submenu {
+      position: static;
+      width: 100%;
+      background-color: #ffffff;
+      box-shadow: none;
+      margin-top: 0;
+      opacity: 1;
+      z-index: 1;
+      transition: none;
+      display: none;
+    }
+  
+    header ul li:hover .submenu {
+      display: block;
+    }
+  
+    header ul .submenu li {
+      width: 30%;
+      text-align: center;
+    }
+  
+    header ul .submenu li a {
+      padding: 10px 10px;
+    }
+  }
+
+
+@media (max-width: 768px){
+    header{
+        padding: 11px 4%;   
+    }
+    #menu-icon{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: rgb(255, 255, 255);
+        box-shadow: green;
+        border-top: 2px solid pink;
+        transition: 0.2s;
+        text-align: left;
+    }
+    .navbar.active{
+        top: 100%
+    }
+    .navbar a{
+        padding: 1.5rem;
+        display: block;
+        color:rgb(195, 0, 255);
+
+    }
+    .home-text span{
+        font-size: 0.9rem;
+    }
+    .home-text h1{
+        font-size: 2.4rem;
+    }
+    .home-texth2{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-text{
+        padding-top: inherit;
+    }
+    .About{
+        flex-direction: column-reverse;
+    }
+   
+}
+
+@media (max-width: 364px){
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+/* sa recipe na */
+  
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, span, th, tr, td {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+  
+h1 {
+    font-size: 36px;
+    text-underline-offset: 10px;
+    margin-bottom: 20px;
+    font-family: 'Poppins';
+}
+  
+p {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+  
+ol > li::marker {
+    font-weight: bold;
+}
+  
+ol {
+    line-height: 30px;
+}
+  
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 35px;
+    justify-content: flex-start;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.left {
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+  
+.right {
+    width: 50%;
+    box-sizing: border-box;
+}
+  
+.img-holder {
+    border: 8px solid #6e4d94;
+    margin: 20px;
+    margin-bottom: 100px;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 80%;
+    margin-top: 100px;
+}
+  
+.img-holder img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+  
+.content {
+    padding: 10 40px;
+    margin-top: 30px;
+}
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+th,
+td {
+    padding: 8px;
+    border: 1px solid #ffffff;
+    background-color: #cec5d6;
+}
+  
+th {
+    background-color: #5f2a77cc;
+    color: #FFFFFF;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.content table,
+.content p,
+.content ul {
+    margin-bottom: 30px;
+  }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 30px;
+      text-underline-offset: 8px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    .container {
+      flex-direction: column;
+      
+    }
+
+    .left,
+    .right {
+      width: 100%;
+    }
+
+    .img-holder {
+      margin: 15px;
+    }
+
+    table {
+      font-size: 15px;
+      
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+      padding: 15px;
+      margin: 15px auto;
+}
+
+.img-holder {
+      margin: 10px;
+      border-width: 5px;
+      
+}
+
+table {
+      font-size: 20px;
+    }
+}
+
+
